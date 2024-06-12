@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Welcome to Fremantle Library - Your destination for knowledge, community, and inspiration. Discover a wide range of books, resources, and programs.">
+    <meta name="keywords" content="Fremantle Library, books, resources, community, programs, reading">
+    <title>Fremantle Library</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script>
+        function showPage(pageId) {
+            const pages = document.querySelectorAll('.page');
+            pages.forEach(page => {
+                page.style.display = 'none';
+            });
+            document.getElementById(pageId).style.display = 'block';
+        }
+
+        window.addEventListener('DOMContentLoaded', (event) => {
+            showPage('home');
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><a onclick="showPage('home')">Fremantle Library</a></h1>
+            <nav>
+                <ul>
+                    <img src="logo.jpg">
+                    <li><a href="#" onclick="showPage('home')">Home</a></li>
+                    <li><a href="#" onclick="showPage('book-list')">Book List</a></li>
+                    <li><a href="#" onclick="showPage('about')">About</a></li>
+                    <li><a href="#" onclick="showPage('contact')">Contact</a></li>
+                    <li><a href="#" onclick="showPage('login')">Login</a></li>
+                    <li><search-bar action="search-results.html" method="GET"><input type="text" placeholder="Search..."></form></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div id="home" class="page">
+        <main>
+            <h1>Featured Books</h1>
+        <div class="book-card">
+            <img src="book-cover1.jpg" alt="Book Cover 1">
+            <h2><a href="#" onclick="showPage('book-details1')">Blue Sisters</a></h2>
+            <p>The Blue sisters have always been exceptional – and exceptionally different.</p>
+        </div>
+        <div class="book-card">
+            <img src="book-cover2.jpg" alt="Book Cover 2">
+            <h2><a href="#" onclick="showPage('book-details2')">Safe Haven</a></h2>
+            <p>The new novel from the Miles Franklin award-winning author of Chai Time at Cinnamon Gardens.</p>
+        </div>
+        <div class="book-card">
+            <img src="book-cover3.jpg" alt="Book Cover 3">
+            <h2><a href="#" onclick="showPage('book-details3')">Trippy</a></h2>
+            <p>A moving, tender and thoughtful exploration of a complicated subject.</p>
+        </div>
+        <div class="book-card">
+            <img src="book-cover4.jpg" alt="Book Cover 4">
+            <h2><a href="#" onclick="showPage('book-details4')">The Third Perspective</a></h2>
+            <p>A transformative guide to brave communication for the modern world</p>
+        </div>
+        <div class="book-card">
+            <img src="book-cover5.jpg" alt="Book Cover 5">
+            <h2><a href="#" onclick="showPage('book-details5')">Offbeat North America</a></h2>
+            <p>Get inspired for your next adventure with this incredible collection of 100 unforgettable North American destinations that are far from the tourist trail.</p>
+        </div>
+        </main>
+    </div>
+
+    <div id="book-list" class="page" style="display:none;">
+        <main>
+            <h2>Book List</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Title</th>
+                        <th>Author</th>
+                        <th>Genre</th>
+                        <th>Published Date</th>
+                        <th>Review</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><a href="#" onclick="showPage('book-details1')">Blue Sisters</a></td>
+                        <td>Coco Mellors</td>
+                        <td>Fiction</td>
+                        <td>2024-01-01</td>
+                        <td>Good</td>
+                    </tr>
+                    <tr>
+                        <td><a href="#" onclick="showPage('book-details2')">Safe Haven</a></td>
+                        <td>Shankari Chandran</td>
+                        <td>Crime & Mystery Fiction</td>
+                        <td>2024-01-01</td>
+                        <td>Perfect</td>
+                    </tr>
+                    <tr>
+                        <td><a href="#" onclick="showPage('book-details3')">Trippy</a></td>
+                        <td>Ernesto Londono</td>
+                        <td>Family & Health</td>
+                        <td>2024-01-01</td>
+                        <td>Healthy</td>
+                    </tr>
+                    <tr>
+                        <td><a href="#" onclick="showPage('book-details4')">The Third Perspective</a></td>
+                        <td>Africa Brooke</td>
+                        <td>Psychology</td>
+                        <td>2024-01-01</td>
+                        <td>Peaceful</td>
+                    </tr>
+                    <tr>
+                        <td><a href="#" onclick="showPage('book-details5')">Offbeat North America</a></td>
+                        <td>Lonely Planet</td>
+                        <td>Adventure</td>
+                        <td>2024-01-01</td>
+                        <td>Amazing</td>
+                    </tr>
+                </tbody>
+            </table>
+        </main>
+    </div>
+
+    <div id="book-details1" class="page" style="display:none;">
+        <main>
+            <h2>Blue Sisters</h2>
+            <img src="book-cover1.jpg" alt="Book Cover 1" class="large-cover">
+            <p><strong>Author:</strong>Coco Mellors</p>
+            <p><strong>Publication Year:</strong> 2024</p>
+            <p><strong>Genre:</strong>Fiction</p>
+            <p><strong>Synopsis:</strong> From the Sunday Times bestselling author of Cleopatra and Frankenstein
+            </p>
+            <p><strong>Review:</strong>The Blue sisters have always been exceptional and exceptionally different. Avery, a strait-laced lawyer living in London, is the typical eldest daughter, though she hiding a secret that could undo her perfect life forever. Bonnie was a boxer but, following a devastating defeat, she's been working as a bouncer in LA, until one reckless night threatens to drive her out of the city. And Lucky, the rebellious youngest, is a model in Paris whose hard-partying ways are finally catching up with her. Then there was Nicky, the beloved fourth sister, whose unexpected death left Avery, Bonnie and Lucky reeling. When, a year later, the three of them must reunite in New York to stop the sale of their childhood home, they find that it's only by returning to each other that they can navigate their grief, addiction and heartbreak—and learn to fall in love with life again.</p>
+        </main>
+    </div>
+    <div id="book-details2" class="page" style="display:none;">
+        <main>
+            <h2>Safe Haven</h2>
+            <img src="book-cover2.jpg" alt="Book Cover 2" class="large-cover">
+            <p><strong>Author:</strong>Shankari Chandran</p>
+            <p><strong>Publication Year:</strong> 2024</p>
+            <p><strong>Genre:</strong>Crime & Mystery Fiction</p>
+            <p><strong>Synopsis:</strong> The new novel from the Miles Franklin award-winning author of Chai Time at Cinnamon Gardens.
+            </p>
+            <p><strong>Review:</strong> It was a beautiful evening. The wind gathered speed, lifting the frangipanis from the grove behind him, pink and yellow petals defying gravity. Beyond the trees, hidden by the foliage and rows of towering palm trees, the detention centre slept fitfully in the heavy summer heat. The palms blocked the ocean gust that now swirled around him, filling his lungs with the taste of temple flowers and salt. It reminded him of home. He took a deep breath, stepped off the escarpment and felt the red sand rush up towards him. After arriving in Australia seeking asylum, Fina dedicates herself to aiding the refugees held in a detention centre at Port Camden, a remote island outpost. Appalled by the mistreatment of those in custody, Fina speaks out to the media about the poor conditions within the facility, as a result she is arrested, taken from her home in the small country town of Hastings and threatened with deportation. When a security officer dies under suspicious circumstances, Lucky, a special investigator, arrives to uncover the truth. Her mystery is tied to Fina’s fate—and the secrets of the detention centre will divide the town and the nation.</p>
+        </main>
+    </div>
+    <div id="book-details3" class="page" style="display:none;">
+        <main>
+            <h2>Trippy</h2>
+            <img src="book-cover3.jpg" alt="Book Cover 3" class="large-cover">
+            <p><strong>Author:</strong>Ernesto Londono</p>
+            <p><strong>Publication Year:</strong> 2024</p>
+            <p><strong>Genre:</strong>Family & Health</p>
+            <p><strong>Synopsis:</strong> A moving, tender and thoughtful exploration of a complicated subject.</p>
+            <p><strong>Review:</strong> When he signed up for a psychedelic retreat deep in the Brazilian rainforest, veteran New York Times journalist Ernesto Londono was so depressed that he had come close to attempting suicide just weeks earlier.
+
+                To his astonishment, the nine-day ayahuasca experience provided Londono an instant reprieve from his depression and became the genesis of a personal transformation that anchors this sweeping exploration of the booming field of medicinal psychedelics.
+                
+                Londono's deeply researched and brilliantly reported account introduces readers to a dazzling array of psychedelic enthusiasts who are upending our understanding of trauma and healing. From Indigenous elders who regard psychedelics as portals to the spirit world to religious leaders using mind-bending substances as sacraments, as well as war veterans who credit psychedelics with alleviating their PTSD, and clinicians trying to resurrect a promising field of medicine hastily abandoned in when the War on Drugs was announced in the 1970s.
+                
+                Trippy is the definitive book of psychedelics and mental health today, an in-depth and nuanced look at this booming industry which makes sense of the perils, limitations and promise of turning to psychedelics in the pursuit of healing.</p>
+        </main>
+    </div>
+    <div id="book-details4" class="page" style="display:none;">
+        <main>
+            <h2>The Third Perspective</h2>
+            <img src="book-cover4.jpg" alt="Book Cover 4" class="large-cover">
+            <p><strong>Author:</strong>Africa Brooke</p>
+            <p><strong>Publication Year:</strong> 2024</p>
+            <p><strong>Genre:</strong>Psychology</p>
+            <p><strong>Synopsis:</strong> A transformative self-help guide, from one of the most exciting new thought leaders across the globe.</p>
+            <p><strong>Review:</strong> You have your story, they have theirs - somewhere in-between lies the power of The Third Perspective. A compass for connection, in a deeply divided world. You will find a space where we as humans, still have permission to stumble, fuck up, learn and grow - privately and publicly - without the overwhelming pressure to be perfect. My three-part method - AWARENESS, RESPONSIBILITY, EXPRESSION - provides a pathway to liberation, honest communication, and bravery at a time where most of us find ourselves walking on eggshells, especially in our own minds. The cultural pressures we face are ever expanding, my goal is to put you back in the driver's seat. You'll break free from self-censorship, learn to truly listen, cultivate new outlooks and build stronger, more authentic relationships with others, but most importantly, with yourself.</p>
+        </main>
+    </div>
+    <div id="book-details5" class="page" style="display:none;">
+        <main>
+            <h2>Offbeat North America</h2>
+            <img src="book-cover5.jpg" alt="Book Cover 5" class="large-cover">
+            <p><strong>Author:</strong>Lonely Planet</p>
+            <p><strong>Publication Year:</strong> 2024</p>
+            <p><strong>Genre:</strong>Adventure</p>
+            <p><strong>Synopsis:</strong> Get inspired for your next adventure with this incredible collection of 100 unforgettable North American destinations that are far from the tourist trail.</p>
+            <p><strong>Review:</strong> From under-the-radar national parks to small towns with big personalities, these remarkable unsung spots have so much to offer. Travelers will also learn more about the heart of each place; its history; and how to support the local community during a visit. Inside Offbeat  North America: 100 lesser-known places with hidden gems from each of the USA's 50 states, along with Canada, Mexico, and the Dominican Republic Features 25 additional bonus offbeat destinations to put on your radar including Clear Lake in California, Stehekin in Washington, Boone in North Carolina, and more Go if you like comparisons offering magnificent alternatives to over-populated sites and landmarks Amazing crowd-free experiences accompany each destination Insider knowledge on how your visit can make a positive impact on local businesses Helpful tips for first-time travelers Expert advice on why you should go, when you should go and how to get there Presented in a beautiful hardcover format with striking photography, practical planning information and handy locator maps Perfect for curious minds, this inspiring guide is a must-read for anyone dreaming of, or planning, a sustainable adventure in North America. Gift this unique book to the traveler in your life or simply keep these off-the-beaten track destinations all to yourself.</p>
+        </main>
+    </div>
+
+    <div id="about" class="page" style="display:none;">
+        <main>
+            <h2>About Fremantle Library</h2>
+            <p>Information about ubication of Fremantle Library</p>
+            <p>Email: info@fremantlelibrary.com</p>
+            <p>Phone: +61 0 1234 5678</p>
+            <div>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.8354345097855!2d144.95373531531882!3d-37.8162797797517!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf0727ad7a76f1f23!2sFremantle!5e0!3m2!1sen!2sau!4v1599889181975!5m2!1sen!2sau" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+            </div>
+        </main>
+    </div>
+
+    <div id="contact" class="page" style="display:none;">
+        <main>
+            <h2>Contact Us</h2>
+            <form action="#" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+                
+                <button type="submit">Send</button>
+            </form>
+            <p>Email: info@fremantlelibrary.com</p>
+            <p>Phone: +61 0 1234 5678</p>
+            <p>Walyalup Civic Centre, 151 High Street, Fremantle WA 6160</p>
+        </main>
+        
+    </div>
+
+    <div id="login" class="page" style="display:none;">
+        <main>
+            <h2>Login</h2>
+            <form action="#" method="post" onsubmit="showPage('home'); return false;">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+                
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+                
+                <button type="submit">Login</button>
+            </form>
+        </main>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Fremantle Library</p>
+            <p>&trade; "Kevin Tapiero"</p>
+        </div>
+        <div class="social-media">
+            <a href="https://www.facebook.com" target="_blank" title="Facebook">
+                <i class="fab fa-facebook"></i>
+            </a>
+            <a href="https://www.instagram.com" target="_blank" title="Instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.twitter.com" target="_blank" title="Twitter">
+                <i class="fab fa-twitter"></i>
+            </a>
+        </div>
+    </footer>
+</body>
+</html>
+
+
+    
+
